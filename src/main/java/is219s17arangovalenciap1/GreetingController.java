@@ -1,5 +1,6 @@
 package is219s17arangovalenciap1;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -7,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * Created by pipe on 2/18/17.
  */
+
+@Controller
 public class GreetingController {
     /**
      * The @RequestMapping annotation ensures that HTTP requests to /greeting are mapped to the greeting() method.

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="utf-8"></meta>
+    <title>IS 219 PROJECT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+
+
+    <link href="css/bootstrap.css" rel="stylesheet"></link>
+
+
+    <link href="css/default.css" rel="stylesheet"></link>
+    <link href="css/main.css" rel="stylesheet"></link>
+
+
+    <link href="css/font-awesome.css" rel="stylesheet"></link>
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:400,900,700,600,300,200" rel="stylesheet" type="text/css"></link>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet"></link>
+    <link rel="shortcut icon" href="images/favicon.ico"></link>
+
+
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+
+</head>
+    <body class=" hasGoogleVoiceExt">
+
+        <div id="page" class="page">
+            <header class="header5" id="header5">
+               <nav role="navigation" class="navbar navbar-default">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
+                                <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                            </button>
+                            <a href="index.html" class="navbar-brand brand"><i class="fa fa-laptop"></i><span th:text="${resume.person.name}"></span><span>Resume</span></a>
+                        </div>
+
+                <div id="navbar-collapse-02" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="#content-section5">Education</a></li>
+                        <li><a href="#content-section8">Skills</a></li>
+                        <li><a href="#content-section7">Experience</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </span>
+        </nav>
+
+        <div class="container">
+            <div class="intro center-content">
+
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="tag-line text-center m-auto">Software Developer</div>
+                                    <h1 class="pull-stop text-center m-auto">First, Solve the problem. Then, write the code</h1>
+                                    <p class="m-auto text-center"></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="tag-line text-left">Soccer Fan</div>
+                                    <h1 class="text-left pull-stop">The Beautiful Game</h1>
+                                    <p class="text-left">
+                                        I've never met anybody who says they don't like the World Cup.
+                                        If you're a soccer fan or not, everybody loves watching it, and
+                                        I think it could be the same for other sports.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="tag-line text-left">Photographer</div>
+                                    <h1 class="text-left pull-stop">Picture This!</h1>
+                                    <p class="text-left">
+                                        Photography can only represent the present.
+                                        Once photographed, the subject becomes part of the past.
+                                    </p>
+                                    <ul class="icon-box list-inline text-left">
+                                        <li><a href="https://www.instagram.com/eusoupipe/"><i class="fa fa-instagram"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <a class="prev carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+        <a class="next carousel-control" href="#carousel-example-generic" role="button" data-slide="next"><i class="fa fa-angle-right"></i></a>
+
+    </header>
+
+            <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+            <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+            <div class="container divider2">
+                <div class="col-md-12">
+                    <div class="divider dashed">
+                        <span><i class="fa fa-caret-down"></i></span>
+                    </div>
+                </div>
+            </div>
+
+    <!--==Education ==-->
+    <section id="content-section5" class="content-section7">
+        <div class="container">
+            <div class="row center-vertically">
+
+                <div class="col-md-4">
+                    <div class="text-center single-content" th:each="education : ${resume.person.educations}">
+                        <i class="fa fa-university" aria-hidden="true"></i>
+                        <h3 th:text="${education.school}"><span>* </span></h3>
+                        <p th:text="${education.major}"></p>
+                        <p th:text="${education.currentRank}"></p>
+                        <p th:text="${education.graduationDate}"></p>
+                        <p th:text="${education.gpa}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container divider2">
+
+        <div class="col-md-12">
+
+            <div class="divider dashed">
+
+                <span><i class="fa fa-caret-down"></i></span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--== Skills ==-->
+    <section id="content-section8" class="content-section8">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" th:each="skill : ${resume.person.skills}">
+                    <div class="text-center single-content extra">
+                        <h3><i class="fa fa-code" aria-hidden="true"></i> </h3>
+                            <h3 th:text="${skill.skillType}"></h3>
+                            <p class="text-center" th:each="description : ${skill.descriptions}" th:utext="${description.skillName}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--== Skills End ==-->
+
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <div class="container divider2">
+        <div class="col-md-12">
+            <div class="divider dashed">
+                <span><i class="fa fa-caret-down"></i></span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--== Relevant Experience ==-->
+   <section id="content-section7" class="content-section7">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" th:each="experience : ${resume.person.experiences}">
+                    <div class="text-center single-content">
+                        <i class="fa fa-suitcase"></i>
+                        <h3 th:text="${experience.company}"></h3>
+                        <p th:text="${experience.position}"></p>
+                        <p th:text="${experience.date}"></p>
+                        <p th:text="${experience.description}"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!--== Relevant Experience End ==-->
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+    <div class="container divider2">
+        <div class="col-md-12">
+            <div class="divider dashed">
+                <span>
+                    <i class="fa fa-caret-down"></i>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-overlay">
+                    <div class="col-md-6">
+                        <h1 class="section-title">Ask a Question</h1>
+                        <div class="row">
+                          <form action="mailto:afa29@njit.edu" method="post" enctype="text/plain">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="sr-only">Your Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label class="sr-only">Your Email</label>
+                                    <input type="email" name="email" class="form-control" placeholder="Your Email">
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 ">
+                                <div class="form-group">
+                                    <label class="sr-only">Message</label>
+                                    <textarea class="form-control textarea" name="message" rows="5" placeholder="Message"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default ">Send</button>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                    <div class="col-md-5 col-md-offset-1">
+                        <ul class="list-unstyled">
+                            <li class="addr-title">Address</li>
+                            <li><i class="fa fa-phone"></i> <span th:text="${resume.person.phoneNumber}"></span></li>
+                            <li><i class="fa fa-home"></i> <span th:text="${resume.person.address}"></span></li>
+                            <li><i class="fa fa-envelope-o"></i> <span th:text="${resume.person.email}"></span></li>
+                        </ul>
+                        <ul class="list-inline social-links">
+                            <li class="addr-title"> Social Link</li><br><br>
+                            <li><a href="https://www.linkedin.com/in/andres-arango-165b28131/"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/pipe1411"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://twitter.com/eusoupipe"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/u/0/106836605347995543217"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.instagram.com/eusoupipe/"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                        <a href="../files/resume.pdf" download>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default ">Get My Resume</button>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center section-intro">
+                    <h3
+                            class="footer-logo"> By Andres F. Arango using Spring
+                    </h3>
+                            <a href="https://twitter.com/eusoupipe"><i class="fa fa-twitter"></i></a>
+                            <a href="https://plus.google.com/u/0/106836605347995543217"><i class="fa fa-google"></i></a>
+                </div>
+            </div>
+         </div>
+    </footer>
+
+</div>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/isotope.pkgd.js"></script>
+<script src="js/jquery.countdown.min.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="js/portfolio-custom1.js"></script>
+<script src="js/portfolio-custom2.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
+

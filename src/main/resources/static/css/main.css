@@ -496,6 +496,9 @@
 
 .content-section7 .single-content{
     background: url('../images/GOPR4199.JPG') no-repeat scroll center top / cover ;
+    width: 350px;
+    max-width: 350px;
+    height: auto;
 }
 
 .content-section7 .single-content:before{
@@ -566,22 +569,26 @@
     max-width: 335px;
     position: relative;
     z-index: 2;
+    font-family: "DejaVu Sans Mono", serif;
 }
 
 .content-section8{
-    padding: 50px;
+    padding: 50px 0;
     background-color: #fafafa;
 }
 
 .content-section8 .single-content{
     position: relative;
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     padding: 20px 30px;
 }
 
 .content-section8 .single-content{
     background: url('../images/GOPR4199.JPG') no-repeat scroll center top / cover ;
+    width: 350px;
+    max-width: 350px;
+    height: auto;
 }
 
 .content-section8 .single-content:before{
@@ -637,6 +644,7 @@
     max-width: 335px;
     position: relative;
     z-index: 2;
+    font-family: "DejaVu Sans Mono", serif;
 }
 
 
